@@ -3,31 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>Questao 1</title>
-</head>
-<body>
   <script>
     var matriz1 = [[0, 0], [0, 0]];
     var matriz2 = [[0, 0], [0, 0]];
     var matriz3 = [[0, 0], [0, 0]];
 
-    function pergunta(matriz3){
+    function mostrarResultado(matriz3){
       alert("Resultado da multiplicação das matrizes:\n" + matriz3[0].join(", ") + "\n" + matriz3[1].join(", "));
     }
 
-    function inputTemperatura(callback){
+    function preencherMatrizes(callback){
       for (let lin = 0; lin < 2; lin++) {
         for (let col = 0; col < 2; col++) {
-          matriz1[lin][col] = prompt('Para a matriz 1, digite o valor do elemento da linha ' + lin + ' coluna ' + col);
-          matriz2[lin][col] = prompt('Agora para a matriz 2, digite o valor do elemento da linha ' + lin + ' coluna ' + col); 
+          matriz1[lin][col] = parseInt(prompt('Digite o valor da matriz 1 para a linha ' + lin + ' coluna ' + col));
+          matriz2[lin][col] = parseInt(prompt('Digite o valor da matriz 2 para a linha ' + lin + ' coluna ' + col));
         }
       }
 
       for (let lin = 0; lin < 2; lin++) {
         for (let col = 0; col < 2; col++) {
-          matriz3[lin][col] = 0; 
-
-          for (let i = 0; i < 2; i++) {
-            matriz3[lin][col] += matriz1[lin][i] * matriz2[i][col]; 
+            matriz3[lin][col] = 0;
+            for (let i = 0; i < 2; i++) {
+               matriz3[lin][col] += matriz1[lin][i] * matriz2[i][col];
           }
         }
       }
@@ -35,8 +32,9 @@
       callback(matriz3);
     }
 
-    inputTemperatura(pergunta);
+    preencherMatrizes(mostrarResultado);
   </script>
+</head>
+<body>
 </body>
-</html>
 </html>
