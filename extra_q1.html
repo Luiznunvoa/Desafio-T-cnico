@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Questao 2</title>
+  </head>
+  <body>
+	   <script>
+      function resposta(pos){
+         alert("A quantidade de numeros positivos foi: " + pos)
+      }
+
+      function inputNumeros(callback){
+         var pos
+         pos = 0
+         for (var i = 1; i <= 6; i++){
+            let numero = prompt('Diga um numero: ')
+            if(numero > 0) {
+               pos++
+            }
+         }
+         callback(pos)
+      }
+      inputNumeros(resposta);
+      </script>
+  </body>
+</html>
