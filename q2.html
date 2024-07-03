@@ -4,10 +4,17 @@
     <title>Questao 2</title>
   </head>
   <body>
-   <form name ="subscribe" id="temp_frm" action="#">
-      <input type="number" id="temp_num"/>  
-      <input type="button" name="submit" onclick="processFormData();" />
-	<script src="q2.js">
-   </script>
+	   <script>
+      function pergunta(temperatura){
+         f = temperatura * 1.8 + 32
+         alert("a temperatura em Fahrenheit sera: " + f)
+      }
+
+      function inputTemperatura(callback){
+         let temperatura = prompt('Diga a temperatura em Celsius: ')
+         callback(temperatura)
+      }
+      inputTemperatura(pergunta);
+      </script>
   </body>
 </html>
