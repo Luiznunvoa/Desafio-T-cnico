@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Questao 2</title>
+  </head>
+  <body>
+	   <script>
+         
+      function resposta(x, n){
+         alert(power(x, n))
+      }
+
+      function power(x, n) {
+      // Caso base
+         if (n === 0) {
+            return 1;
+         }
+         // Caso recursivo
+         return x * power(x, n - 1);
+      }
+
+      function inputNumeros(callback){
+         let x = prompt('Diga X: ')
+         let n = prompt('Diga N: ')
+         callback(x, n)
+      }
+      inputNumeros(resposta);
+      </script>
+  </body>
+</html>
