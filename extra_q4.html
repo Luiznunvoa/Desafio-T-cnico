@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <title>Questao extra 4</title>
+  </head>
+  <body>
+	   <script>
+      function Descobre_Nota(nota){
+         let notaCaracter;
+         if (nota >= 90) {
+            notaCaracter = 'A';
+         } else if (nota >= 80 && nota < 90) {
+            notaCaracter = 'B';
+         } else if (nota >= 70 && nota < 80) {
+            notaCaracter = 'C';
+         } else if (nota >= 60 && nota < 70) {
+            notaCaracter = 'D';
+         } else {
+            notaCaracter = 'F';
+         }
+         alert("Nota " +  nota + " corresponde a " +  notaCaracter);
+      }
+
+      function inputNota(callback){
+         let nota = prompt('Diga a Nota: ')
+         callback(nota)
+      }
+      inputNota(Descobre_Nota);
+      </script>
+  </body>
+</html>
