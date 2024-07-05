@@ -6,12 +6,12 @@
   <body>
 	   <script>
       function pergunta(temperatura){
-         f = temperatura * 1.8 + 32
-         alert("a temperatura em Fahrenheit sera: " + f)
+         c = (temperatura -  32) / 1.8
+         alert("a temperatura em Celcius sera: " + c.toFixed(2))
       }
 
       function inputTemperatura(callback){
-         let temperatura = prompt('Diga a temperatura em Celsius: ')
+         let temperatura = prompt('Diga a temperatura em Fahrenheit: ')
          callback(temperatura)
       }
       inputTemperatura(pergunta);
